@@ -1,0 +1,7 @@
+@jupyter-widgets/jupyterlab-manager@1.1.0
+@jupyter-widgets/jupyterlab-sidecar@0.4.0
+jupyter-matplotlib 
+jupyterlab-datawidgets 
+itkwidgets@0.26.0
+
+jupyter_cadquery@v0.9.5
