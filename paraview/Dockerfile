@@ -16,7 +16,7 @@ RUN conda install --quiet --yes -c conda-forge \
     ipython \
     pillow \
     paraview=5.8.0=py37ha369aaf_8 \
-    nodejs \
+    "nodejs>=10.0.0" \
     numpy \
     matplotlib \
     scipy
