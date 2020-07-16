@@ -20,6 +20,15 @@ RUN conda install --quiet --yes -c conda-forge \
     matplotlib \
     scipy
 
+# Now register ParView's bundled VTK with pip:
+RUN mkdir vtk
+WORKDIR vtk
+COPY setup.py .
+RUN mkdir vtk
+RUN mv $(python -c 'import site; print(site.getsitepackages()[0])' 2>&1)/vtk.py vtk/__init__.py
+RUN pip install -e .
+WORKDIR /root
+
 COPY test_pv_install.py .
 
 COPY start_xvfb.sh /sbin/start_xvfb.sh

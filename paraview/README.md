@@ -20,3 +20,7 @@ If inheriting this image, make sure to set your entry point to include:
 # Make sure to borrow entry point from parent image
 ENTRYPOINT ["tini", "-g", "--", "start_xvfb.sh"]
 ```
+
+
+This also handles the nuances of using ParaView's budled VTK by registering it
+with `pip`
