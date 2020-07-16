@@ -11,12 +11,11 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 RUN conda install --quiet --yes -c conda-forge \
+    ipywidgets \
     jupyter \
-    jupyterlab \
     ipython \
     pillow \
-    paraview=5.8.0=py37ha369aaf_8 \
-    "nodejs>=10.0.0" \
+    paraview=5.8.0 \
     numpy \
     matplotlib \
     scipy
