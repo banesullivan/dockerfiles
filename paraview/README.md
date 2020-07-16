@@ -13,3 +13,10 @@ ERR| vtkXOpenGLRenderWindow (0x555f479c24c0): bad X server connection. DISPLAY=:
 
 this is a flakey and known issue. Simply try again and the headless display
 should work. This happens at random.
+
+If inheriting this image, make sure to set your entry point to include:
+
+```
+# Make sure to borrow entry point from parent image
+ENTRYPOINT ["tini", "-g", "--", "start_xvfb.sh"]
+```
